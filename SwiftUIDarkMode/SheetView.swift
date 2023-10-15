@@ -11,7 +11,15 @@ struct SheetView: View {
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
-
-        AppearanceSelectionPicker()
+        
+        NavigationStack {
+            AppearanceSelectionPicker()
+            .navigationBarTitle(Text("Settings"), displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+               dismiss()
+            }) {
+               Text("Done").bold()
+            })
+        }
     }
 }

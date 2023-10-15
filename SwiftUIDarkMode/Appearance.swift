@@ -10,7 +10,7 @@ import SwiftUI
 enum Appearance: LocalizedStringKey, CaseIterable, Identifiable {
     case light
     case dark
-    case automatic
+    case system
 
     var id: String { UUID().uuidString }
 }

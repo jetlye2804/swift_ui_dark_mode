@@ -10,7 +10,7 @@ import SwiftUI
 class AppearanceManager: ObservableObject {
     @AppStorage("userInterfaceStyle") var userInterfaceStyle: Int?
     
-    @Published var selectedAppearance: Appearance = .automatic
+    @Published var selectedAppearance: Appearance = .system
 
     func initAppearanceStyle() {
         let scenes = UIApplication.shared.connectedScenes
@@ -32,7 +32,7 @@ class AppearanceManager: ObservableObject {
     
     func applyAppearanceStyle(_ selectedAppearance: Appearance) {
         switch selectedAppearance {
-            case .automatic:
+            case .system:
                 userInterfaceStyle = 0
                 if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
                     windowScene.windows.forEach { window in
@@ -59,13 +59,13 @@ class AppearanceManager: ObservableObject {
     func setInitialSelectedAppearance() {
         switch userInterfaceStyle {
             case 0:
-                selectedAppearance = .automatic
+                selectedAppearance = .system
             case 1:
                 selectedAppearance = .light
             case 2:
                 selectedAppearance = .dark
             default:
-                selectedAppearance = .automatic
+                selectedAppearance = .system
         }
     }
 }

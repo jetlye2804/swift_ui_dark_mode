@@ -46,8 +46,5 @@ struct ContentView: View {
             .navigationTitle(navigationTitle)
             .navigationBarTitleDisplayMode(selectedDisplayMode)
         }
-        
-        
-        
     }
 }

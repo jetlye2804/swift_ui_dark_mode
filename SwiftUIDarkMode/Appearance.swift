@@ -1,27 +1,16 @@
 //
 //  Appearance.swift
-//  SwiftUIDarkMode
+//  SwitchToTheDarkSide
 //
-//  Created by Jet Lye on 06/05/2023.
+//  Created by Jet Lye on 15/10/2023.
 //
 
 import SwiftUI
 
-enum Appearance: String, CaseIterable {
-    case dark = "Dark"
-    case light = "Light"
-    case system = "System"
+enum Appearance: LocalizedStringKey, CaseIterable, Identifiable {
+    case light
+    case dark
+    case automatic
 
-    var colorScheme: ColorScheme? {
-        switch self {
-        case .dark:
-            return .dark
-        case .light:
-            return .light
-        case .system:
-            return nil
-        }
-    }
+    var id: String { UUID().uuidString }
 }
-
-let appearanceKey = "appearanceSelection"

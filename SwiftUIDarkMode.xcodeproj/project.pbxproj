@@ -7,24 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9A5A0802ADC286900F90FE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A5A07B2ADC286900F90FE4 /* ContentView.swift */; };
+		C9A5A0812ADC286900F90FE4 /* AppearanceSelectionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A5A07C2ADC286900F90FE4 /* AppearanceSelectionPicker.swift */; };
+		C9A5A0822ADC286900F90FE4 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A5A07D2ADC286900F90FE4 /* Appearance.swift */; };
+		C9A5A0832ADC286900F90FE4 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A5A07E2ADC286900F90FE4 /* AppearanceManager.swift */; };
+		C9A5A0842ADC286900F90FE4 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A5A07F2ADC286900F90FE4 /* SheetView.swift */; };
 		C9CAA9642A0630EF00EA13D9 /* SwiftUIDarkModeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CAA9632A0630EF00EA13D9 /* SwiftUIDarkModeApp.swift */; };
-		C9CAA9662A0630EF00EA13D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CAA9652A0630EF00EA13D9 /* ContentView.swift */; };
 		C9CAA9682A0630EF00EA13D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CAA9672A0630EF00EA13D9 /* Assets.xcassets */; };
 		C9CAA96B2A0630EF00EA13D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CAA96A2A0630EF00EA13D9 /* Preview Assets.xcassets */; };
-		C9CAA9722A0631EF00EA13D9 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CAA9712A0631EF00EA13D9 /* Appearance.swift */; };
-		C9CAA9742A06321200EA13D9 /* AppearanceSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CAA9732A06321200EA13D9 /* AppearanceSelectionView.swift */; };
-		C9CAA9762A06347500EA13D9 /* ConditionalColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CAA9752A06347500EA13D9 /* ConditionalColorScheme.swift */; };
+		C9EE3C052ADC270900F8E4DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9EE3C042ADC270900F8E4DB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9A5A07B2ADC286900F90FE4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9A5A07C2ADC286900F90FE4 /* AppearanceSelectionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceSelectionPicker.swift; sourceTree = "<group>"; };
+		C9A5A07D2ADC286900F90FE4 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		C9A5A07E2ADC286900F90FE4 /* AppearanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
+		C9A5A07F2ADC286900F90FE4 /* SheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		C9CAA9602A0630EF00EA13D9 /* SwiftUIDarkMode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDarkMode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CAA9632A0630EF00EA13D9 /* SwiftUIDarkModeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDarkModeApp.swift; sourceTree = "<group>"; };
-		C9CAA9652A0630EF00EA13D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9CAA9672A0630EF00EA13D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9CAA96A2A0630EF00EA13D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C9CAA9712A0631EF00EA13D9 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
-		C9CAA9732A06321200EA13D9 /* AppearanceSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSelectionView.swift; sourceTree = "<group>"; };
-		C9CAA9752A06347500EA13D9 /* ConditionalColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalColorScheme.swift; sourceTree = "<group>"; };
+		C9EE3C042ADC270900F8E4DB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +61,13 @@
 		C9CAA9622A0630EF00EA13D9 /* SwiftUIDarkMode */ = {
 			isa = PBXGroup;
 			children = (
-				C9CAA9712A0631EF00EA13D9 /* Appearance.swift */,
-				C9CAA9732A06321200EA13D9 /* AppearanceSelectionView.swift */,
-				C9CAA9752A06347500EA13D9 /* ConditionalColorScheme.swift */,
 				C9CAA9632A0630EF00EA13D9 /* SwiftUIDarkModeApp.swift */,
-				C9CAA9652A0630EF00EA13D9 /* ContentView.swift */,
+				C9A5A07D2ADC286900F90FE4 /* Appearance.swift */,
+				C9A5A07E2ADC286900F90FE4 /* AppearanceManager.swift */,
+				C9A5A07C2ADC286900F90FE4 /* AppearanceSelectionPicker.swift */,
+				C9A5A07B2ADC286900F90FE4 /* ContentView.swift */,
+				C9A5A07F2ADC286900F90FE4 /* SheetView.swift */,
+				C9EE3C042ADC270900F8E4DB /* Localizable.strings */,
 				C9CAA9672A0630EF00EA13D9 /* Assets.xcassets */,
 				C9CAA9692A0630EF00EA13D9 /* Preview Content */,
 			);
@@ -104,7 +110,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					C9CAA95F2A0630EF00EA13D9 = {
 						CreatedOnToolsVersion = 14.2;
@@ -135,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9CAA96B2A0630EF00EA13D9 /* Preview Assets.xcassets in Resources */,
+				C9EE3C052ADC270900F8E4DB /* Localizable.strings in Resources */,
 				C9CAA9682A0630EF00EA13D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,11 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9CAA9662A0630EF00EA13D9 /* ContentView.swift in Sources */,
-				C9CAA9742A06321200EA13D9 /* AppearanceSelectionView.swift in Sources */,
-				C9CAA9722A0631EF00EA13D9 /* Appearance.swift in Sources */,
-				C9CAA9762A06347500EA13D9 /* ConditionalColorScheme.swift in Sources */,
+				C9A5A0812ADC286900F90FE4 /* AppearanceSelectionPicker.swift in Sources */,
+				C9A5A0802ADC286900F90FE4 /* ContentView.swift in Sources */,
 				C9CAA9642A0630EF00EA13D9 /* SwiftUIDarkModeApp.swift in Sources */,
+				C9A5A0822ADC286900F90FE4 /* Appearance.swift in Sources */,
+				C9A5A0842ADC286900F90FE4 /* SheetView.swift in Sources */,
+				C9A5A0832ADC286900F90FE4 /* AppearanceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +201,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -253,6 +262,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

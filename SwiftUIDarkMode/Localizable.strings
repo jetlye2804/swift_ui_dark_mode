@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SwiftUIDarkMode
+
+  Created by Jet Lye on 15/10/2023.
+  
+*/
+
+"Appearance" = "Appearance";
+"light" = "Light";
+"dark" = "Dark";
+"automatic" = "Automatic";

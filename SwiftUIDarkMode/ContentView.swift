@@ -1,54 +1,33 @@
 //
 //  ContentView.swift
-//  SwiftUIDarkMode
+//  SwitchToTheDarkSide
 //
-//  Created by Jet Lye on 06/05/2023.
+//  Created by Laurent B on 11/11/2021.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    @State private var currentAppearance: Appearance = {
-        guard let savedAppearance = UserDefaults.standard.string(forKey: appearanceKey),
-              let appearance = Appearance(rawValue: savedAppearance) else {
-            return .system
-        }
-        return appearance
-    }()
-    
-    @State private var isSheetPresented = false
-    @Environment(\.colorScheme) var systemColorScheme
-    
+    @State private var showingSheet = false
+    @EnvironmentObject var appearanceManager: AppearanceManager
+
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Is it Dark?")
-                    .font(.title)
-                Text((currentAppearance == .system ? systemColorScheme : currentAppearance.colorScheme) == .dark ? "Yes" : "No")
-                    .font(.largeTitle)
-                    .bold()
-                
-                Text("Follow System Settings?")
-                    .font(.title)
-                Text(currentAppearance == .system ? "Yes" : "No")
-                    .font(.largeTitle)
-                    .bold()
-                
-                Button(action: {
-                    isSheetPresented = true
-                }) {
-                    Text("Change Appearance")
-                        .font(.headline)
-                        .padding()
-                        .foregroundColor(Color.blue)
-                        .cornerRadius(10)
-                }
+        VStack {
+            Text("Appearance")
+                .font(.title)
+            Text("From @AppStorage")
+            Text(appearanceManager.userInterfaceStyle != nil ? String(appearanceManager.userInterfaceStyle!) : "N/A")
+            
+            Button("Show Sheet") {
+                showingSheet.toggle()
             }
-            .navigationBarTitle("Dark Mode Status")
+            .sheet(isPresented: $showingSheet) {
+                // No need to pass any parameters to SheetView
+                SheetView()
+            }
         }
-        .conditionalColorScheme(currentAppearance.colorScheme)
-        .sheet(isPresented: $isSheetPresented) {
-            AppearanceSelectionView(currentAppearance: $currentAppearance)
+        .onAppear {
+            appearanceManager.initAppearanceStyle()
         }
     }
 }

@@ -13,6 +13,11 @@ class AppearanceManager: ObservableObject {
     @Published var selectedAppearance: Appearance = .system
 
     func initAppearanceStyle() {
+        
+        // Deprecated in iOS 15.0
+        // UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .unspecified;
+        
+        // Method 1
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
         
@@ -28,6 +33,27 @@ class AppearanceManager: ObservableObject {
                     window.overrideUserInterfaceStyle = .unspecified
             }
         }
+        
+        // Method 2
+//        var appliedStyle: UIUserInterfaceStyle = .unspecified;
+//        
+//        switch userInterfaceStyle {
+//            case 0:
+//                appliedStyle = .unspecified
+//            case 1:
+//                appliedStyle = .light
+//            case 2:
+//                appliedStyle = .dark
+//            default:
+//                appliedStyle = .unspecified
+//        }
+//        
+//        
+//        UIApplication
+//            .shared
+//            .connectedScenes
+//            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+//            .first{ $0.isKeyWindow }?.window?.overrideUserInterfaceStyle = appliedStyle
     }
     
     func applyAppearanceStyle(_ selectedAppearance: Appearance) {

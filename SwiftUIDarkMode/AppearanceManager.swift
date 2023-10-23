@@ -18,21 +18,36 @@ class AppearanceManager: ObservableObject {
         // UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .unspecified;
         
         // Method 1
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScene = scenes.first as? UIWindowScene
-        
-        windowScene?.windows.forEach { window in
-            switch userInterfaceStyle {
-                case 0:
-                    window.overrideUserInterfaceStyle = .unspecified
-                case 1:
-                    window.overrideUserInterfaceStyle = .light
-                case 2:
-                    window.overrideUserInterfaceStyle = .dark
-                default:
-                    window.overrideUserInterfaceStyle = .unspecified
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            windowScene.windows.forEach { window in
+                switch userInterfaceStyle {
+                    case 0:
+                        window.overrideUserInterfaceStyle = .unspecified
+                    case 1:
+                        window.overrideUserInterfaceStyle = .light
+                    case 2:
+                        window.overrideUserInterfaceStyle = .dark
+                    default:
+                        window.overrideUserInterfaceStyle = .unspecified
+                }
             }
         }
+        
+//        let scenes = UIApplication.shared.connectedScenes
+//        let windowScene = scenes.first as? UIWindowScene
+//        
+//        windowScene?.windows.forEach { window in
+//            switch userInterfaceStyle {
+//                case 0:
+//                    window.overrideUserInterfaceStyle = .unspecified
+//                case 1:
+//                    window.overrideUserInterfaceStyle = .light
+//                case 2:
+//                    window.overrideUserInterfaceStyle = .dark
+//                default:
+//                    window.overrideUserInterfaceStyle = .unspecified
+//            }
+//        }
         
         // Method 2
 //        var appliedStyle: UIUserInterfaceStyle = .unspecified;

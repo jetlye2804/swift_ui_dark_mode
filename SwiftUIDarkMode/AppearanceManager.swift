@@ -72,28 +72,21 @@ class AppearanceManager: ObservableObject {
     }
     
     func applyAppearanceStyle(_ selectedAppearance: Appearance) {
-        switch selectedAppearance {
-            case .system:
-                userInterfaceStyle = 0
-                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                    windowScene.windows.forEach { window in
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            windowScene.windows.forEach { window in
+                switch selectedAppearance {
+                    case .system:
+                        userInterfaceStyle = 0
                         window.overrideUserInterfaceStyle = .unspecified
-                    }
-                }
-            case .light:
-                userInterfaceStyle = 1
-                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                    windowScene.windows.forEach { window in
+                    case .light:
+                        userInterfaceStyle = 1
                         window.overrideUserInterfaceStyle = .light
-                    }
-                }
-            case .dark:
-                userInterfaceStyle = 2
-                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                    windowScene.windows.forEach { window in
+                    case .dark:
+                        userInterfaceStyle = 2
                         window.overrideUserInterfaceStyle = .dark
-                    }
                 }
+            }
         }
     }
     

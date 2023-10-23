@@ -39,9 +39,6 @@ struct ContentView: View {
                         SheetView()
                     }
                 }
-                .onAppear {
-                    appearanceManager.initAppearanceStyle()
-                }
             }
             .navigationTitle(navigationTitle)
             .navigationBarTitleDisplayMode(selectedDisplayMode)

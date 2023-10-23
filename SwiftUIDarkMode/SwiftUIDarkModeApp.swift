@@ -15,6 +15,9 @@ struct SwiftUIDarkModeApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(appearanceManager)
+                .onAppear {
+                    appearanceManager.initAppearanceStyle()
+                }
         }
     }
 }

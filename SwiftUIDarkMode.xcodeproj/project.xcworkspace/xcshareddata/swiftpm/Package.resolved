@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "observableuserdefault",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/davidsteppenbeck/ObservableUserDefault.git",
+      "state" : {
+        "revision" : "eab5caf5d82cf60c18a839f47b429de47078b2a8",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "6ad4ea24b01559dde0773e3d091f1b9e36175036",
+        "version" : "509.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}

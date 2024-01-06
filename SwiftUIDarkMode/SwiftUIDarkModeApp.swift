@@ -9,15 +9,16 @@ import SwiftUI
 
 @main
 struct SwiftUIDarkModeApp: App {
-    @StateObject var appearanceManager = AppearanceManager()
+    @State var appearanceManager = AppearanceManager()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(appearanceManager)
+                .environment(appearanceManager)
                 .onAppear {
                     appearanceManager.initAppearanceStyle()
                 }
+            
         }
     }
 }

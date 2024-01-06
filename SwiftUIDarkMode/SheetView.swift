@@ -20,6 +20,6 @@ struct SheetView: View {
             }) {
                Text("Done").bold()
             })
-        }
+        }.interactiveDismissDisabled()
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AppearanceSelectionPicker: View {
-    @EnvironmentObject var appearanceManager: AppearanceManager
+    @Environment(AppearanceManager.self) var appearanceManager: AppearanceManager
 
     var body: some View {
         List {
@@ -28,10 +28,9 @@ struct AppearanceSelectionPicker: View {
                 .foregroundColor(.primary)
             }
         }
-
-        .onChange(of: appearanceManager.selectedAppearance, perform: { value in
-            appearanceManager.applyAppearanceStyle(value)
-        })
+        .onChange(of: appearanceManager.selectedAppearance) {
+            appearanceManager.applyAppearanceStyle(appearanceManager.selectedAppearance)
+        }
         .onAppear {
             appearanceManager.setInitialSelectedAppearance()
         }

@@ -14,9 +14,9 @@ It's purely Swift, and using SwiftUI.
 (ObservableUserDefault by David Steppenbeck)[https://github.com/davidsteppenbeck/ObservableUserDefault]
 
 ## Startup
-Just clone the whole repository into your Mac. Use Xcode 15 and above. 
+Just clone the whole repository into your Mac. Use Xcode 16 and above. 
 
-The minimum deployment version is iOS 17.0 and iPadOS 17.0.
+The minimum deployment version is iOS 18.0 and iPadOS 18.0.
 
 ## What this app can do?
 1. Provides three type of settings in List (under a sheet) - Manual Light mode that makes the whole app in light appearance, Manual Dark mode that makes the whole app in dark appearance, and system-wide mode to follow the devices appearance.
